@@ -7,50 +7,55 @@
 
 ---
 
-<!-- 主布局 -->
+<!-- 主布局：小人+头像左侧 + 项目右侧 -->
 <table>
 <tr>
 <td width="35%" align="center">
 
-<!-- 小人SVG + 圆形头像 -->
-<svg width="200" height="280" viewBox="0 0 200 280">
-  <!-- 定义圆形裁剪，用于头像 -->
-  <defs>
-    <clipPath id="circleClip">
-      <circle cx="100" cy="55" r="45"/>
-    </clipPath>
-  </defs>
-  
-  <!-- 身体（梯形） -->
-  <path d="M70 110 L50 250 L150 250 L130 110 Z" fill="#4A5568"/>
+<!-- 小人 + 头像组合 -->
+<div align="center">
+
+<!-- 头像（圆形） -->
+<img src="https://github.com/lanxiuyun.png" width="120" style="border-radius: 50%; border: 3px solid #00D9FF; margin-bottom: -60px; position: relative; z-index: 2;" />
+
+<br><br>
+
+<!-- 小人身体 SVG（没有外部图片引用） -->
+<svg width="180" height="200" viewBox="0 0 180 200">
+  <!-- 身体 -->
+  <path d="M60 80 L45 190 L135 190 L120 80 Z" fill="#4A5568"/>
   
   <!-- 左手臂（交叉在胸前） -->
-  <path d="M70 130 Q40 160 85 170" stroke="#4A5568" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M60 100 Q35 125 75 135" stroke="#4A5568" stroke-width="16" fill="none" stroke-linecap="round"/>
   
   <!-- 右手臂（交叉在胸前） -->
-  <path d="M130 130 Q160 160 115 170" stroke="#4A5568" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M120 100 Q145 125 105 135" stroke="#4A5568" stroke-width="16" fill="none" stroke-linecap="round"/>
   
   <!-- 躯干细节 -->
-  <path d="M75 115 L125 115 L140 245 L60 245 Z" fill="#2D3748"/>
+  <path d="M65 85 L115 85 L128 185 L52 185 Z" fill="#2D3748"/>
   
   <!-- 领口 -->
-  <path d="M85 115 Q100 135 115 115" fill="#1A202C"/>
+  <path d="M75 85 Q90 100 105 85" fill="#1A202C"/>
   
-  <!-- 头部圆形背景（作为边框） -->
-  <circle cx="100" cy="55" r="48" fill="#E2E8F0"/>
+  <!-- 脖子 -->
+  <rect x="82" y="65" width="16" height="20" fill="#F7C5B8"/>
   
-  <!-- 用户头像（圆形裁剪） -->
-  <image 
-    href="https://github.com/lanxiuyun.png" 
-    x="55" y="10" 
-    width="90" height="90" 
-    clip-path="url(#circleClip)"
-  />
+  <!-- 头部轮廓（代替头像位置） -->
+  <circle cx="90" cy="45" r="35" fill="#F7C5B8"/>
   
-  <!-- 头部边框 -->
-  <circle cx="100" cy="55" r="45" fill="none" stroke="#00D9FF" stroke-width="3"/>
+  <!-- 头发 -->
+  <ellipse cx="90" cy="25" rx="32" ry="18" fill="#2D3748"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="80" cy="45" r="4" fill="#1A202C"/>
+  <circle cx="100" cy="45" r="4" fill="#1A202C"/>
+  
+  <!-- 嘴巴 -->
+  <path d="M85 58 Q90 62 95 58" stroke="#1A202C" stroke-width="2" fill="none"/>
   
 </svg>
+
+</div>
 
 <br>
 
@@ -75,8 +80,11 @@
 </tr>
 </table>
 
+---
+
 <!-- 技术栈 -->
 <p align="center">
+  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -84,3 +92,6 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
 </p>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=lanxiuyun&color=00D9FF&style=flat-square" />
+</p>
